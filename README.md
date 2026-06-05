@@ -1,7 +1,6 @@
 # Webbplats
 
 Statisk single-page webbplats för Kazozabyrå AB, byggd i ren HTML/CSS/JS.
-Ingen server, inget ramverk, inget byggsteg – ladda upp och kör.
 
 ---
 
