@@ -343,7 +343,7 @@ img {
     padding: 5rem 3.5rem 5rem 2rem;
     max-width: 960px;
     /*margin-left: auto;*/
-    margin:auto
+    margin: auto
 }
 
 .hero-badge {
@@ -674,6 +674,200 @@ img {
     line-height: 1.5;
 }
 
+/* ─── PRISPAKET ────────────────────────────────────────────── */
+#priser {
+    background: var(--gray-100);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.pcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 1.9rem 2rem;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.pcard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pcard--popular {
+    border: 2px solid var(--blue-500);
+    box-shadow: var(--shadow-lg);
+}
+
+.pcard-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue-500);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.pcard-name {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.pcard-price {
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    color: var(--blue-900);
+    line-height: 1.1;
+    margin-bottom: 0.9rem;
+}
+
+.pcard-price span {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin-left: 4px;
+}
+
+.pcard-desc {
+    font-size: 13.5px;
+    color: var(--gray-500);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+.pcard-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.pcard-features li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13.5px;
+    color: var(--gray-700);
+    line-height: 1.5;
+}
+
+.pcard-features li::before {
+    content: '✓';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--green-500);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.pcard-tagline {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue-500);
+    margin-bottom: 0.6rem;
+}
+
+.pcard-excl {
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--gray-500);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.pcard-cta {
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.pricing-quote {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    background: var(--blue-900);
+    border-radius: var(--radius-lg);
+    padding: 2rem 2.25rem;
+}
+
+.pricing-quote-text {
+    flex: 1 1 320px;
+}
+
+.pricing-quote-text h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+}
+
+.pricing-quote-text p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.pricing-note {
+    max-width: 760px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.pricing-note p {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--gray-500);
+}
+
+.pricing-note strong {
+    color: var(--gray-700);
+}
+
+.pricing-note a {
+    color: var(--blue-500);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pricing-note a:hover {
+    text-decoration: underline;
+}
+
 /* ─── RIKSTÄCKNING (MÖRK) ──────────────────────────────────── */
 #rikstackning {
     background: var(--blue-900);
@@ -877,6 +1071,16 @@ select:focus {
     border-color: var(--blue-500);
     background: var(--white);
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+select,
+select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
 }
 
 textarea {
