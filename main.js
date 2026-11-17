@@ -43,6 +43,24 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+/* ── Prispaket – förifyll kontaktformuläret ──────────────────── */
+document.querySelectorAll('[data-paket]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const paket = btn.dataset.paket;
+    const msgField = document.getElementById('cf-msg');
+    const serviceField = document.getElementById('cf-service');
+    const isQuote = paket === 'offert';
+
+    if (serviceField && paket) serviceField.value = isQuote ? 'Individuell offert' : paket;
+
+    if (msgField && paket && !msgField.value.trim()) {
+      msgField.value = isQuote
+        ? 'Jag vill ha en individuell offert. Kort om mitt företag (bransch, antal verifikationer/mån, antal anställda):'
+        : `Jag är intresserad av paketet ${paket}.`;
+    }
+  });
+});
+
 /* ── Scroll-reveal ────────────────────────────────────────────── */
 const revealObserver = new IntersectionObserver(
   entries => {
@@ -120,4 +138,3 @@ if (nlForm) {
     }
   });
 }
-
